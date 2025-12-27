@@ -31,6 +31,6 @@ jobs:
         npm ci
         npx playwright install --with-deps
         npm test
-
-    - name: Build Docker Images
-      uses: ./.github/workflows/docker-build.yml
+  docker-build:
+    needs: unit-tests
+    uses: ./.github/workflows/docker-build.yml

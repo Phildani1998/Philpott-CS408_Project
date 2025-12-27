@@ -14,7 +14,7 @@ permissions:
 jobs:
 
   docker:
-    uses: ./.github/workflows/docker-build.yml
+    uses: ./.github/workflows/docker-push.yml
     secrets: inherit
   deploy:
     needs: docker
